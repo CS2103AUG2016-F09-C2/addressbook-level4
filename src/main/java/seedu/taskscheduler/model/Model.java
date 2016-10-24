@@ -28,7 +28,7 @@ public interface Model {
     /** Marks the given task. */
     void markTask(ReadOnlyTask target) throws UniqueTaskList.TaskNotFoundException, DuplicateTagException;
 
-    //@@author A0148145E
+    //@@author A0138696L
     /** Unmarks the given task. */
     void unMarkTask(ReadOnlyTask target) throws UniqueTaskList.TaskNotFoundException;
 
