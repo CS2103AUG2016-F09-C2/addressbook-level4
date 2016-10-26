@@ -32,7 +32,6 @@ public class MainWindow extends UiPart {
     private Logic logic;
 
     // Independent Ui parts residing in this Ui container
-    private DateTimeDisplay dateTimeDisplay;
     private BrowserPanel browserPanel;
     private TaskListPanel taskListPanel;
     private ResultDisplay resultDisplay;
@@ -46,7 +45,7 @@ public class MainWindow extends UiPart {
     private Scene scene;
 
     private String taskSchedulerName;
-
+    
     @FXML
     private AnchorPane browserPlaceholder;
 

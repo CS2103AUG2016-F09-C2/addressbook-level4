@@ -39,14 +39,53 @@
           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="30.0" prefHeight="50.0" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
             <Label fx:id="dateTime" text=" Date Time" />
-            <Label fx:id="taskType" text="Task Type" GridPane.columnIndex="1" />
-            <Label fx:id="taskStatus" text="Task Status" GridPane.columnIndex="2" />
+            <Label text="Events" GridPane.columnIndex="1">
+               <graphic>
+                  <Label text="1">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+               </graphic>
+            </Label>
+            <Label text="Deadlines" GridPane.columnIndex="2">
+               <graphic>
+                  <Label text="2">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+               </graphic>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label text="Completed" GridPane.columnIndex="3">
+               <graphic>
+                  <Label text="3">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+               </graphic>
+            </Label>
+            <Label text="Overdue" GridPane.columnIndex="4">
+               <graphic>
+                  <Label text="4">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+               </graphic>
+            </Label>
          </children>
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
@@ -63,13 +102,16 @@
                      <padding>
                         <Insets bottom="10.0" />
                      </padding>
+                     <children>
+                        <ListView fx:id="todayDisplay" prefHeight="200.0" prefWidth="430.0" />
+                     </children>
                   </AnchorPane>
-                  <ListView fx:id="tagPlaceholder" prefHeight="180.0" prefWidth="430.0" />
+                  <ListView fx:id="tagDisplay" prefHeight="180.0" prefWidth="430.0" />
                </children>
             </VBox>
             <AnchorPane fx:id="taskListPanelPlaceholder" minWidth="450" prefWidth="550">
                 <padding>
-                    <Insets bottom="10" left="10" right="10" top="10" />
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </padding>
             </AnchorPane>
          </items>
