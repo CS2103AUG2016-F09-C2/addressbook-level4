@@ -29,7 +29,7 @@ public interface Model {
      * @throws IllegalValueException */
     void markTask(Task target) throws UniqueTaskList.TaskNotFoundException, IllegalValueException;
 
-    //@@author A0148145E
+    //@@author A0138696L
     /** Unmarks the given task. */
     void unMarkTask(Task target) throws UniqueTaskList.TaskNotFoundException, IllegalValueException;
 
