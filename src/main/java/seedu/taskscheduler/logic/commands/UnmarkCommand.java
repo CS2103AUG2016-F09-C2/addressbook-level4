@@ -1,7 +1,7 @@
 package seedu.taskscheduler.logic.commands;
 import seedu.taskscheduler.commons.core.Messages;
 import seedu.taskscheduler.commons.core.UnmodifiableObservableList;
-import seedu.taskscheduler.model.tag.UniqueTagList.DuplicateTagException;
+import seedu.taskscheduler.commons.exceptions.IllegalValueException;
 import seedu.taskscheduler.model.task.ReadOnlyTask;
 import seedu.taskscheduler.model.task.Task;
 import seedu.taskscheduler.model.task.UniqueTaskList.TaskNotFoundException;
@@ -46,7 +46,7 @@ public class UnmarkCommand extends Command{
         try {
             model.unMarkTask(taskToUnmark);
             CommandHistory.addExecutedCommand(this);
-        } catch (NullPointerException npe) {
+        } catch (IllegalValueException npe) {
             return new CommandResult(MESSAGE_UNMARK_TASK_FAIL);
         } catch (TaskNotFoundException e) {
             assert false : Messages.MESSAGE_TASK_CANNOT_BE_MISSING;
@@ -59,7 +59,7 @@ public class UnmarkCommand extends Command{
         try {
             model.markTask(taskToUnmark);
             CommandHistory.addRevertedCommand(this);
-        } catch (DuplicateTagException e) {
+        } catch (IllegalValueException e) {
             return new CommandResult(MarkCommand.MESSAGE_MARK_TASK_FAIL);
         } catch (TaskNotFoundException pnfe) {
             assert false : Messages.MESSAGE_TASK_CANNOT_BE_MISSING;
