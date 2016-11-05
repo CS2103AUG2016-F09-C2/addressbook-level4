@@ -5,6 +5,9 @@ import seedu.taskscheduler.commons.events.storage.FilePathChangedEvent;
 
 //@@author A0138696L
 
+/**
+ * Changing working file path of taskScheduler.
+ */
 public class SetpathCommand extends Command {
 
     public static final String COMMAND_WORD = "setpath";
@@ -37,7 +40,6 @@ public class SetpathCommand extends Command {
             CommandHistory.getPreviousStorageFilePath();
         }
         savedPathLink = CommandHistory.getPreviousStorageFilePath();
-        System.out.println(savedPathLink);
         EventsCenter.getInstance().post(new FilePathChangedEvent(savedPathLink));
         CommandHistory.addRevertedCommand(this);
         return new CommandResult(String.format(MESSAGE_SUCCESS, savedPathLink));
