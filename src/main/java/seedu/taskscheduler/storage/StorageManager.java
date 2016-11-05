@@ -92,7 +92,7 @@ public class StorageManager extends ComponentManager implements Storage {
 
     //@@author A0138696L
     @Subscribe
-    public void changeFilePathRequestEvent(FilePathChangedEvent event) {
+    public void handleChangeFilePathRequestEvent(FilePathChangedEvent event) {
         setTaskSchedulerFilePath(event.toString());
     }
     //@@author

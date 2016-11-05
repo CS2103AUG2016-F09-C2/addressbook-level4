@@ -183,7 +183,7 @@ public class MainApp extends Application {
     
     //@@author A0138696L
     @Subscribe
-    public void changeFilePathRequestEvent(FilePathChangedEvent event) {
+    public void handlehangeFilePathRequestEvent(FilePathChangedEvent event) {
         logger.info(LogsCenter.getEventHandlingLogMessage(event));
         config.setTaskSchedulerFilePath(event.toString());
         try {
@@ -193,8 +193,4 @@ public class MainApp extends Application {
         }
     }
     //@@author
-    
-    public static void main(String[] args) {
-        launch(args);
-    }
 }

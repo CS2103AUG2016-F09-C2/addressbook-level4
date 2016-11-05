@@ -99,7 +99,7 @@ public class StatusBarFooter extends UiPart {
     }
     
     @Subscribe
-    public void changeFilePathRequestEvent(FilePathChangedEvent event) {
+    public void handleChangeFilePathRequestEvent(FilePathChangedEvent event) {
         logger.info(LogsCenter.getEventHandlingLogMessage(event));
         setSyncStatus("Saved Data Path Changed");
         setSaveLocation(event.toString());
