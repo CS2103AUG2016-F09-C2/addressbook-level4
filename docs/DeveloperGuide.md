@@ -99,48 +99,6 @@ being saved to the hard disk and the status bar of the UI being updated to refle
 > Note how the event is propagated through the `EventsCenter` to the `Storage` and `UI` without `Model` having
   to be coupled to either of them. This is an example of how this Event Driven approach helps us reduce direct 
   coupling between components.
- 
-#### Replace Command 
- 
-The _Sequence Diagram_ below shows how the components interact for the scenario where the user issues the
-command `replace 1 do homework by today`.
-  
-<img src="images\SDforEditTask.png" width="800">
-
-#### Undo Command
-
-The _Sequence Diagram_ below shows how the components interact for the scenario where the user issues the
-command `undo`.
-
-<img src="images\SDforUndoTask.png" width="800">
-
-#### Mark Command
-
-The _Sequence Diagram_ below shows how the components interact for the scenario where the user issues the
-command `mark 1`.
-
-<img src="images\SDforMarkTask.png" width="800">
-
-#### Setpath Command
-
-The _Sequence Diagram_ below shows how the components interact for the scenario where the user issues the
-command `setpath filename`.
-
-<img src="images\SDforSetpath.png" width="800">
-
-#### Exit Command
-
-The _Sequence Diagram_ below shows how the components interact for the scenario where the user issues the
-command `exit`.
-
-<img src="images\SDforExit.png" width="800">
-
-#### Recur Command
-
-The _Sequence Diagram_ below shows how the components interact for the scenario where the user issues the
-command `recur 1 every 3 days until next week`.
-
-<img src="images\SDforRecurTask.png" width="800">
 
 The sections below give more details of each component.
 
