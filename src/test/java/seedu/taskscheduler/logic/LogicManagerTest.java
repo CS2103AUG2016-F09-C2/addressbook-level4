@@ -156,12 +156,6 @@ public class LogicManagerTest {
         String expectedMessage = String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE);
         assertCommandBehavior(
                 "add ", expectedMessage);
-        assertCommandBehavior(
-                "add Valid Name from 12345 e/ today at valid, address", expectedMessage);
-        assertCommandBehavior(
-                "add Valid Name s/ today to yesterday at address", expectedMessage);
-        assertCommandBehavior(
-                "add from 090909 to 090909 at valid, address", expectedMessage);
     }
 
     @Test

@@ -50,7 +50,7 @@ public abstract class CommandParser {
                     );
     
     protected static final Pattern FLOATING_DATA_ARGS_FORMAT = // '/' forward slashes are reserved for delimiter prefixes
-            Pattern.compile("(?<name>[\\p{Alnum} ]+)");
+            Pattern.compile("(?<name>.+)");
 
     protected static final Pattern PATH_DATA_ARGS_FORMAT =
             Pattern.compile("(?<name>[\\p{Alnum}|/|.|_|:|\\\\|\\s+]+)"); 
@@ -88,10 +88,7 @@ public abstract class CommandParser {
         if (taskMatcher.matches()) {
             return new EventTask(new Name(taskMatcher.group("name")), new TaskDateTime(taskMatcher.group("startDate")),
                     new TaskDateTime(taskMatcher.group("endDate")), new Location(taskMatcher.group("address")));
-        } else if (containsDelimiters(args)) {
-            throw new InputMismatchException();
         }
-        
         
         taskMatcher = DEADLINE_DATA_ARGS_FORMAT.matcher(args);
         if (taskMatcher.matches()) {
@@ -104,10 +101,5 @@ public abstract class CommandParser {
             return new FloatingTask(new Name(taskMatcher.group("name")));
         }
         return null;
-    }
-    
-    private boolean containsDelimiters(String args) {
-        return (args.contains(START_DATE_DELIMITER) 
-                || args.contains(END_DATE_DELIMITER));
     }
 }

@@ -11,7 +11,7 @@ import seedu.taskscheduler.model.task.*;
  */
 public class TypicalTestTasks {
 
-    public static TestTask alice, benson, carl, daniel, elle, fiona, george, event, ida, overdue, floating, deadline;
+    public static TestTask alice, benson, carl, daniel, elle, fiona, george, event, ida, overdue, floating, deadline, url;
 
     public TypicalTestTasks() {
         try {
@@ -40,6 +40,8 @@ public class TypicalTestTasks {
                     .withStartDate("").withEndDate("").withType("FLOATING").withTags().build(); // floating task
             deadline = new TaskBuilder().withName("Deadline Task").withAddress("")
                     .withStartDate("").withEndDate("tomorrow").withType("DEADLINE").withTags("Deadline").build(); // deadline task
+            url = new TaskBuilder().withName("https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html").withAddress("")
+                    .withStartDate("").withEndDate("").withType("FLOATING").withTags().build(); // floating task
 
         } catch (IllegalValueException e) {
             e.printStackTrace();
