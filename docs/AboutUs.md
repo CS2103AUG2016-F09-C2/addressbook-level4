@@ -12,13 +12,13 @@ Role: Team lead <br>
 * Components in charge of: [Logic](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/DeveloperGuide.md#logic-component) [Model](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/DeveloperGuide.md#model-component) [Integration]
 * Aspects/tools in charge of: Testing, Compiling, GitHub
 * Features implemented:
-	* [add] (https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-add-a-task--add)
-	* [edit] (https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-edit-a-task--edit)
-	* [mark] (https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-mark-a-task--mark)
-	* [recur] (https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-recur-a-task--recur)
-	* [replace] (https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-replace-a-task--replace)
-	* [tag] (https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-tag-a-task--tag)
-	* [Indicate overdue and completed task] (https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-identify-overdue-and-completed-task)
+	* [add](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-add-a-task--add)
+	* [edit](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-edit-a-task--edit)
+	* [mark](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-mark-a-task--mark)
+	* [recur](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-recur-a-task--recur)
+	* [replace](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-replace-a-task--replace)
+	* [tag](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-tag-a-task--tag)
+	* [Indicate overdue and completed task](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-identify-overdue-and-completed-task)
 * Code written: [[functional code](../collated/main/A0148145E.md)][[test code](../collated/test/A0148145E.md)][[docs](../collated/docs/A0148145E.md)]
 * Other major contributions:
 	* Do initial refactoring from AddressBook to MustDoList
@@ -53,9 +53,9 @@ Role: Editor <br>
 * Features implemented:
 	* [find](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-find-a-task--find)
 	* [setpath](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-set-a-storage-path--setpath)
-	* [Unmark] (https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-unmark-a-task--ummark)
-	* [Export] (https://github.com/CS2103AUG2016-F09-C2/main/blob/updateUserGuide/docs/UserGuide.md#how-to-export-data--export)
-	* [Import] (https://github.com/CS2103AUG2016-F09-C2/main/blob/updateUserGuide/docs/UserGuide.md#how-to-import-data--import)
+	* [Unmark](https://github.com/CS2103AUG2016-F09-C2/main/blob/master/docs/UserGuide.md#how-to-unmark-a-task--ummark)
+	* [Export](https://github.com/CS2103AUG2016-F09-C2/main/blob/updateUserGuide/docs/UserGuide.md#how-to-export-data--export)
+	* [Import](https://github.com/CS2103AUG2016-F09-C2/main/blob/updateUserGuide/docs/UserGuide.md#how-to-import-data--import)
 * Code written: [[functional code](../collated/main/A0138696L.md)][[test code](../collated/test/A0138696L.md)][[docs](../collated/docs/A0138696L.md)]
 * Other major contributions:
 	* Ensure that code is running as expected 
