@@ -105,7 +105,7 @@ public interface ReadOnlyTask {
         } else if (getType() == TaskType.EVENT) {
             return getStartDate();
         }
-        return null;
+        return getEndDate();
     }
 
     //@@author A0148145E
@@ -114,6 +114,14 @@ public interface ReadOnlyTask {
      */  
     default boolean isBefore(ReadOnlyTask other) {
         return getComparisonDateTime().isBefore(other.getComparisonDateTime());
+    }
+    
+    /**
+     * Compare TaskDateTime and return true if is same
+     */
+    default boolean isSameTime(ReadOnlyTask other) {
+        return getComparisonDateTime().isSameTime(other.getComparisonDateTime());
+                
     }
 
     //@@author A0148145E

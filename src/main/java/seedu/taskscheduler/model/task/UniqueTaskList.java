@@ -79,15 +79,22 @@ public class UniqueTaskList implements Iterable<Task> {
      * @return
      */
     private int indexToInsertInSortedOrder(Task toAdd) {
-        if (toAdd.getType() != TaskType.FLOATING) {
-            for (int i = FIRST_INDEX; i < internalList.size(); i++) {
-                if (toAdd.isBefore(internalList.get(i))) {
-                    return i;
-                }
+        for (int i = FIRST_INDEX; i < internalList.size(); i++) {
+            if (compareTaskOrder(toAdd, internalList.get(i))) {
+                return i;
             }
         }
-        // floating task will always be added to the back
+        // else add to the back
         return internalList.size();
+    }
+    
+    /**
+     * Compares the task in terms of end time and name's lexicographic order
+     * @return true if {@code task} < {@code other} else false
+     */
+    private boolean compareTaskOrder(Task task, Task other) {
+        return task.isBefore(other) || (task.isSameTime(other) 
+                && task.getName().isLexicoSmaller(other.getName()));
     }
 
     //@@author A0148145E
