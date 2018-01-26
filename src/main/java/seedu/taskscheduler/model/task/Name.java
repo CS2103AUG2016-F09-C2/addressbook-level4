@@ -34,6 +34,9 @@ public class Name {
         return test.matches(NAME_VALIDATION_REGEX);
     }
 
+    public boolean isLexicoSmaller(Name other) {
+        return fullName.compareTo(other.fullName) < 0;
+    }
 
     @Override
     public String toString() {

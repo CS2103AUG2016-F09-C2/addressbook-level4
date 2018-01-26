@@ -63,6 +63,15 @@ public class TaskDateTime {
         }
     }
     
+    public boolean isSameTime(TaskDateTime other) { 
+        if (date == null && other.getDate() == null) {
+            return true;
+        } else if (date == null || other.getDate() == null) {
+            return false;
+        }
+        return date == other.getDate();
+    }
+    
     public boolean isAfter(TaskDateTime other) { 
         //as null represents infinity
         if (date == null) {
