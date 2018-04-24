@@ -12,6 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import seedu.taskscheduler.commons.core.LogsCenter;
 import seedu.taskscheduler.model.task.ReadOnlyTask;
+import seedu.taskscheduler.model.task.ReadOnlyTask.TaskType;
 
 import java.util.logging.Logger;
 
@@ -65,7 +66,7 @@ public class PriorityListPanel extends UiPart {
 
     private void setConnections(ObservableList<ReadOnlyTask> taskList) {
         originalList = taskList;
-        priorityListView.setItems(taskList.filtered(b -> !b.hasCompleted()));
+        priorityListView.setItems(taskList.filtered(b -> b.getType() == TaskType.FLOATING));
         priorityListView.setCellFactory(listView -> new TaskListViewCell());
         setEventHandlerForSelectionChangeEvent();
     }
